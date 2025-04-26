@@ -11,7 +11,7 @@
     "affected:test": "nx affected:test --uncommited",
     "affected:graph": "nx graph --uncommited",
     "test:all": "nx run-many --all --target=test --parallel",
-    "lint:all": "nx run-many --all --target=lint --parallel"
+    "lint:all": "nx run-many --all --target=lint --parallel --fix"
   },
   "lint-staged": {
     "**/*.{js,ts,html,scss}": [
@@ -59,12 +59,14 @@
     "@typescript-eslint/utils": "^8.19.0",
     "angular-eslint": "^19.2.0",
     "eslint": "^9.8.0",
-    "eslint-config-prettier": "^10.0.0",
+    "eslint-config-prettier": "^10.1.2",
+    "eslint-plugin-prettier": "^5.2.6",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
     "jest-preset-angular": "~14.4.0",
     "nx": "20.8.0",
-    "prettier": "^2.6.2",
+    "prettier": "^3.5.3",
     "ts-jest": "^29.1.0",
     "ts-node": "10.9.1",
     "tslib": "^2.3.0",
