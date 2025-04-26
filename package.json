@@ -11,7 +11,8 @@
     "affected:test": "nx affected:test --uncommited",
     "affected:graph": "nx graph --uncommited",
     "test:all": "nx run-many --all --target=test --parallel",
-    "lint:all": "nx run-many --all --target=lint --parallel --fix"
+    "lint:all": "nx run-many --all --target=lint --parallel",
+    "prepare": "husky install"
   },
   "lint-staged": {
     "**/*.{js,ts,html,scss}": [
@@ -62,9 +63,11 @@
     "eslint-config-prettier": "^10.1.2",
     "eslint-plugin-prettier": "^5.2.6",
     "eslint-plugin-simple-import-sort": "^12.1.1",
+    "husky": "^8.0.0",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
     "jest-preset-angular": "~14.4.0",
+    "lint-staged": "^15.5.1",
     "nx": "20.8.0",
     "prettier": "^3.5.3",
     "ts-jest": "^29.1.0",
