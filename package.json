@@ -2,7 +2,23 @@
   "name": "@nx-template-angular-ssr/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "start": "nx serve nx-angular-ssr",
+    "build": "nx build nx-angular-ssr",
+    "test": "nx test nx-angular-ssr",
+    "format": "nx format:write --fix=true",
+    "affected:lint": "nx affected:lint --fix=true --uncommited",
+    "affected:test": "nx affected:test --uncommited",
+    "affected:graph": "nx graph --uncommited",
+    "test:all": "nx run-many --all --target=test --parallel",
+    "lint:all": "nx run-many --all --target=lint --parallel"
+  },
+  "lint-staged": {
+    "**/*.{js,ts,html,scss}": [
+      "npm run format",
+      "npm run affected:lint"
+    ]
+  },
   "private": true,
   "dependencies": {
     "@angular/common": "~19.2.0",
